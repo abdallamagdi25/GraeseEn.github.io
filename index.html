@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Grease from Recycled Oil | Comprehensive Analysis</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to integrate fonts and add some flair */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom styles for the roadmap timeline */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+            background: #E5E7EB; /* gray-200 */
+            border-radius: 2px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            transform: translateX(calc(18px - 50% + 2px));
+        }
+         /* Custom Table Style for Responsiveness */
+        .responsive-table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Animation for the hero button */
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+
+        /* Animation for headline text */
+        .animated-text span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Custom Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3498DB; /* blue-500 */
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2980B9; /* darker blue */
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-700">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 shadow-md border-b-2 border-blue-500">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <a href="#home" class="flex items-center space-x-2">
+                    <!-- SVG Logo -->
+                    <svg class="w-12 h-12 text-blue-500" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10C72.0914 10 90 27.9086 90 50C90 72.0914 72.0914 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z" stroke="currentColor" stroke-width="5"/>
+                        <path d="M50 30C45.0313 30 40.2323 33.3031 38 38C42.0677 39.6969 45 43.5063 45 48C45 52.1333 42.4542 55.6924 39 57.5M62 42C59.5458 44.3076 55 47.8667 55 52C55 56.4937 57.9323 60.3031 62 62C64.0677 58.3031 65 55.4937 65 52C65 47.8667 63.5 44.3076 62 42Z" fill="#27AE60"/>
+                        <path d="M35 65L45 75L35 85" stroke="#3498DB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-xl md:text-2xl font-bold text-slate-800 font-montserrat">
+                        GreaseCycle<span class="text-blue-500">Tech</span>
+                    </span>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="#summary" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">Summary</a>
+                    <a href="#market" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">Market</a>
+                    <a href="#technology" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">Technology</a>
+                    <a href="#strategy" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">Strategy</a>
+                    <a href="#roadmap" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">Roadmap</a>
+                    <a href="#references" class="text-sm lg:text-base text-slate-600 hover:text-blue-500 font-semibold transition duration-300">References</a>
+                    <a href="#contact" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+             <a href="#summary" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Executive Summary</a>
+             <a href="#market" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Market Imperative</a>
+             <a href="#technology" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">The Phoenix Process</a>
+             <a href="#strategy" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Strategic Analysis</a>
+             <a href="#roadmap" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Commercialization Roadmap</a>
+             <a href="#financials" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Financial Projections</a>
+             <a href="#governance" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Governance & Safety</a>
+             <a href="#funding" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Funding & Support</a>
+             <a href="#references" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">References</a>
+             <a href="#contact" class="block py-3 px-4 text-slate-600 hover:bg-slate-100">Contact & Next Steps</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Home) -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-white bg-slate-800">
+             <div class="absolute inset-0 bg-slate-800 opacity-60 z-10"></div>
+             <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-foundry-molten-metal-4217-large.mp4" type="video/mp4">
+             </video>
+            <div class="relative text-center z-20 px-4">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animated-text">Industrial Grease from Recycled Oil</h1>
+                <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                    A Comprehensive Strategic, Technical, and Commercial Analysis for the Automated Manufacturing of High-Performance Grease.
+                </p>
+                <a href="#summary" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block pulse-button" data-aos="fade-up" data-aos-delay="400">Discover More</a>
+            </div>
+        </section>
+        
+        <!-- Executive Summary -->
+        <section id="summary" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Executive <span class="text-blue-500">Summary</span></h2>
+                <div class="max-w-4xl mx-auto space-y-6 text-base md:text-lg text-slate-600" data-aos="fade-up" data-aos-delay="100">
+                    <p><strong class="font-bold text-slate-800">Vision:</strong> This project outlines an industrial venture at the intersection of the circular economy and Industry 4.0, transforming used lubricating oil into high-value lubricating greases. We address critical market needs for sustainable waste management and superior, domestically produced lubricants. [1]</p>
+                    <p><strong class="font-bold text-slate-800">The Twin Market Opportunity:</strong> We are anchored in two expanding global markets: waste oil recycling (projected to hit $9.8B by 2033) and industrial grease (forecasted at $9.7B by 2032). This project is architected to capture value from both parallel trends. [2, 3]</p>
+                    <p><strong class="font-bold text-slate-800">The Technology Edge:</strong> Our innovative two-train process uses modern re-refining and advanced compounding, orchestrated by a "Sentient Plant" architecture integrating IoT and AI for predictive maintenance, R&D acceleration, and real-time quality control. [1]</p>
+                    <p><strong class="font-bold text-slate-800">Strategic Strengths:</strong> Our circular economy model provides a powerful ESG narrative, aligning with supportive government policies in Egypt (NISGP, EU/EIB grants). Our AI-driven "data flywheel" creates a compounding competitive advantage. [4, 5]</p>
+                    <p><strong class="font-bold text-slate-800">Financial Snapshot & The Ask:</strong> With a preliminary CapEx of $2.9M - $7.0M for a pilot facility, our business model ensures robust profitability. <strong class="font-bold">The immediate objective is to secure seed funding for Phase 2: the construction and operation of a pilot plant</strong> to validate technology, produce commercial samples, and train our core AI models. [1]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Market Imperative -->
+        <section id="market" class="py-16 md:py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">The Market <span class="text-blue-500">Imperative</span></h2>
+                <div class="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
+                    <div class="lg:col-span-3" data-aos="fade-up">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">The Waste Oil Recycling Market</h3>
+                        <p class="mb-4 text-slate-600">This market is transforming a liability into a valuable commodity, projected to grow from <strong class="font-bold">$4.3B in 2024 to $9.8B by 2033 (CAGR 9.36%)</strong>. Drivers include stringent environmental regulations [8], corporate sustainability mandates [7], and technological advancements that ensure quality parity with virgin oils. [10]</p>
+                        
+                        <h3 class="text-2xl font-bold mb-4 mt-8 text-slate-800">The Lubricating Grease Market</h3>
+                        <p class="text-slate-600">A mature, large-scale market valued at <strong class="font-bold">$6.6B in 2024 and projected to hit $9.7B by 2032 (CAGR 4.6%)</strong>. Growth is fueled by automotive and industrial expansion [11], and a rising demand for high-performance, eco-friendly products [3], creating a direct pull for our greases.</p>
+                    </div>
+                    <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white p-4 rounded-lg shadow-lg">
+                           <canvas class="chart-canvas" id="marketGrowthChart" data-chart-type="market"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Phoenix Process: Technology -->
+        <section id="technology" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">The Process: A <span class="text-blue-500">Technology-Driven</span> Solution</h2>
+                
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <p class="text-lg text-slate-600">Our process is a sophisticated, two-train manufacturing enterprise. A re-refining stage purifies used oil, and a compounding stage engineers it into high-performance greases, all orchestrated by our "Sentient Plant" architecture.</p>
+                </div>
+
+                <!-- Stage 1 -->
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+                    <div data-aos="fade-up">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">🧪 Stage 1: Alchemy of Renewal – Re-refining Used Oil</h3>
+                        <p class="text-slate-600 space-y-4">
+                            We transform used oil into pristine base oil via a multi-step process: rigorous quality control of feedstock, pre-treatment (dewatering & de-fueling), core refining using superior Thin-Film Vacuum Distillation to prevent thermal degradation [17], and finishing with catalytic hydrotreating to produce clear, stable base oil meeting API Group I and II specifications. [1, 14]
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                         <div class="bg-slate-100 p-4 rounded-lg shadow-lg">
+                           <img src="https://placehold.co/600x400/2C3E50/FFFFFF?text=Re-refining+Process+Flow" alt="AI Prompt: A detailed 3D technical illustration of a modular, skid-mounted Thin Film Evaporator (TFE) unit, showing the internal wipers, heated jacket, and external piping connections for feedstock, vapor, and residue. The unit should be set in a clean, modern industrial setting. Style: Photorealistic, technical diagram." class="rounded-md w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+                    <div class="md:order-2" data-aos="fade-up">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">⚙️ Stage 2: Formulation Engineering – Crafting Greases</h3>
+                        <p class="text-slate-600 mb-4">
+                            Using our high-quality re-refined base oil, we compound a versatile portfolio of finished greases. The core process is a precisely controlled saponification reaction in a pressurized reactor [21], determining the final properties of the grease.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex-shrink-0 bg-blue-100 rounded-full p-2 mr-4"><svg class="w-6 h-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg></div>
+                                <div><strong class="font-semibold text-slate-800">Lithium Complex:</strong> High-temp (>260°C), versatile for automotive & industrial use. [23]</div>
+                            </div>
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                                 <div class="flex-shrink-0 bg-emerald-100 rounded-full p-2 mr-4"><svg class="w-6 h-6 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m14.25 9.75 4.72-4.72M7.5 12l-1.5-1.5m1.5 1.5 1.5-1.5m1.5 1.5-1.5-1.5M3 16.5l6-6m0 0 6-6m-6 6-6-6m6 6 6 6" /></svg></div>
+                                <div><strong class="font-semibold text-slate-800">Calcium Sulfonate:</strong> Superior water resistance (>300°C), ideal for marine & heavy-duty tasks.</div>
+                            </div>
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                                 <div class="flex-shrink-0 bg-amber-100 rounded-full p-2 mr-4"><svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg></div>
+                                <div><strong class="font-semibold text-slate-800">Polyurea:</strong> Excellent thermal stability for sealed-for-life applications like EV motors. [22]</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:order-1" data-aos="fade-up" data-aos-delay="100">
+                         <div class="bg-slate-100 p-4 rounded-lg shadow-lg">
+                           <img src="https://placehold.co/600x400/27AE60/FFFFFF?text=Grease+Compounding+Kettle" alt="AI Prompt: A photograph of a clean, stainless steel industrial mixing kettle (grease reactor) with integrated agitators and external piping. The kettle should be shown in a bright, modern factory setting. Style: Clean, realistic industrial photography." class="rounded-md w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                 <!-- Stage 3 -->
+                <div class="text-center" data-aos="zoom-in">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">🧠 The Sentient Plant: An Industry 4.0 Architecture</h3>
+                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                         <div class="text-center p-4">
+                            <div class="bg-blue-100 text-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                               <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                            </div>
+                            <h4 class="font-bold text-lg">Digital Twin & IoT</h4>
+                            <p class="text-sm text-slate-600">A network of IoT sensors creates a dynamic virtual model of the physical plant for simulation and optimization. [27]</p>
+                         </div>
+                         <div class="text-center p-4">
+                            <div class="bg-blue-100 text-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                               <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-1.003 1.11-1.226.554-.223 1.196-.045 1.634.46l.001.001.001.001 3.896 3.896a1.125 1.125 0 0 1 0 1.59l-3.896 3.896a1.125 1.125 0 0 1-1.59 0l-3.896-3.896a1.125 1.125 0 0 1 0-1.59l3.896-3.896Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M18.375 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" /></svg>
+                            </div>
+                            <h4 class="font-bold text-lg">Predictive Maintenance</h4>
+                            <p class="text-sm text-slate-600">AI models trained on vibration and sensor data predict equipment failures before they occur, eliminating downtime.</p>
+                         </div>
+                         <div class="text-center p-4">
+                            <div class="bg-blue-100 text-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-lg">AI-Driven R&D</h4>
+                            <p class="text-sm text-slate-600">AI accelerates R&D by predicting the properties of new grease formulations, reducing the need for physical trials.</p>
+                         </div>
+                     </div>
+                      <div class="mt-8">
+                        <img src="https://placehold.co/800x400/3B82F6/FFFFFF?text=Data+Flywheel+Concept" alt="AI Prompt: A futuristic schematic of the 'Data Flywheel.' A circular diagram with four quadrants labeled: 1. GENERATE (icon of IoT sensors), 2. ANALYZE (icon of a brain/cloud with AI), 3. OPTIMIZE (icon of a control panel), 4. IMPROVE (icon of the factory). Arrows show the continuous, self-improving flow of data. Style: High-tech, glowing blue and green, infographic." class="rounded-lg shadow-lg mx-auto w-full max-w-4xl h-auto">
+                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="strategy" class="py-16 md:py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Strategic Analysis & <span class="text-blue-500">Risk Mitigation</span></h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg" data-aos="fade-up">
+                        <h3 class="text-2xl font-bold text-emerald-600 mb-4">✅ Strengths</h3>
+                        <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                            <li><strong class="font-semibold text-slate-800">Powerful ESG Narrative:</strong> Inherently circular model is attractive to investors, customers, and regulators.</li>
+                            <li><strong class="font-semibold text-slate-800">Technology Moat:</strong> AI-driven "data flywheel" creates a compounding learning advantage.</li>
+                            <li><strong class="font-semibold text-slate-800">Policy Alignment:</strong> Directly supports Egyptian national goals (NISGP) and EU green initiatives.</li>
+                            <li><strong class="font-semibold text-slate-800">Diversified Revenue Streams:</strong> Income from finished grease, valuable by-products, and potential collection fees.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold text-red-500 mb-4">⚠️ Weaknesses & Mitigation</h3>
+                        <ul class="space-y-3 text-slate-600">
+                            <li><strong class="font-semibold text-slate-800">Feedstock Variability:</strong><br><span class="text-sm text-blue-600">Mitigation: Rigorous incoming batch testing and AI-driven pre-treatment protocol adjustments.</span></li>
+                            <li><strong class="font-semibold text-slate-800">High Initial CapEx:</strong><br><span class="text-sm text-blue-600">Mitigation: Modular, skid-mounted plant design allows phased, scalable expansion.</span></li>
+                            <li><strong class="font-semibold text-slate-800">Talent Requirement:</strong><br><span class="text-sm text-blue-600">Mitigation: Strategic partnerships with universities and robust in-house training programs.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Commercialization <span class="text-blue-500">Roadmap</span></h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative timeline-container pl-12 space-y-12">
+                        <div class="relative" data-aos="fade-up">
+                            <div class="timeline-dot w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">1</div>
+                            <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-xl text-slate-800">Phase 1: Academic Design & Feasibility</h3>
+                                <p class="text-blue-500 font-semibold mb-2">(Current Stage - The Blueprint)</p>
+                                <p class="text-slate-600">Produce a complete, investment-ready engineering and business plan. This phase mitigates <strong class="font-semibold">Planning Risk</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="relative" data-aos="fade-up">
+                            <div class="timeline-dot w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">2</div>
+                             <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-xl text-slate-800">Phase 2: Pilot Plant & Technology Validation</h3>
+                                <p class="text-blue-500 font-semibold mb-2">(Seed Investment Target - The Prototype)</p>
+                                <p class="text-slate-600">Build and operate a small-scale, integrated pilot plant to mitigate <strong class="font-semibold">Technology and Market Risk</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="relative" data-aos="fade-up">
+                             <div class="timeline-dot w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">3</div>
+                              <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-xl text-slate-800">Phase 3: Commercialization & Scale-Up</h3>
+                                <p class="text-blue-500 font-semibold mb-2">(Series A Investment Target - The Enterprise)</p>
+                                <p class="text-slate-600">Transition to a full-scale, revenue-generating commercial enterprise, mitigating <strong class="font-semibold">Scaling and Operational Risk</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="financials" class="py-16 md:py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Financial Projections & <span class="text-blue-500">Investment Case</span></h2>
+                 <div class="grid md:grid-cols-2 gap-8">
+                     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg" data-aos="fade-up">
+                         <h3 class="text-xl font-bold text-center mb-4">💰 Est. Capital Expenditure (CapEx) Breakdown</h3>
+                         <canvas class="chart-canvas" id="capexChart" data-chart-type="capex"></canvas>
+                     </div>
+                      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                         <h3 class="text-xl font-bold text-center mb-4">📈 Est. Annual Operational Expenditure (OpEx) Breakdown</h3>
+                          <canvas class="chart-canvas" id="opexChart" data-chart-type="opex"></canvas>
+                     </div>
+                 </div>
+                 <div class="text-center mt-12 max-w-2xl mx-auto" data-aos="zoom-in">
+                     <h3 class="text-2xl font-bold">Investment Analysis</h3>
+                     <p class="text-slate-600 mt-2">A full Discounted Cash Flow (DCF) analysis will be performed to calculate Net Present Value (NPV), Internal Rate of Return (IRR), and Payback Period, demonstrating a definitive financial justification for the project as a sound and highly attractive investment opportunity.</p>
+                 </div>
+            </div>
+        </section>
+
+         <section id="governance" class="py-16 md:py-20 bg-white">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">🛡️ Governance, Safety & <span class="text-blue-500">Environmental Stewardship</span></h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div data-aos="fade-up">
+                        <div class="bg-slate-100 rounded-lg p-6 h-full">
+                           <h3 class="text-xl font-bold text-slate-800 mb-2">Regulatory Compliance</h3>
+                           <p class="text-slate-600 text-sm">Designed to meet or exceed all relevant standards, including EPA's Used Oil Management Standards (40 CFR Part 279), with strict protocols for storage, transport, and a prohibition on mixing with hazardous wastes. [8]</p>
+                        </div>
+                    </div>
+                     <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-slate-100 rounded-lg p-6 h-full">
+                           <h3 class="text-xl font-bold text-slate-800 mb-2">Process Safety Management</h3>
+                           <p class="text-slate-600 text-sm">A multi-layered safety approach combining robust engineering controls, automated safety interlocks in the DCS/PLC, and detailed Standard Operating Procedures (SOPs). [1]</p>
+                        </div>
+                    </div>
+                     <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-slate-100 rounded-lg p-6 h-full">
+                           <h3 class="text-xl font-bold text-slate-800 mb-2">Quantifiable Environmental Impact</h3>
+                           <p class="text-slate-600 text-sm">Every gallon of re-refined oil displaces 42 gallons of virgin crude, uses ~67% less energy, and prevents soil and groundwater contamination from improper disposal. [9]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12" data-aos="zoom-in-up">
+                     <img src="https://placehold.co/800x400/1F2937/FFFFFF?text=Modern+Industrial+Control+Room" alt="AI Prompt: A photo of a modern, clean industrial control room. Several large monitors display process schematics (P&IDs) and data dashboards. An engineer in a hard hat is observing the screens. Style: Realistic, bright, high-tech industrial setting." class="rounded-lg shadow-lg mx-auto w-full max-w-5xl h-auto">
+                </div>
+            </div>
+        </section>
+        
+         <section id="funding" class="py-16 md:py-20 bg-slate-50">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">🇪🇬 Funding and Support: The <span class="text-blue-500">Egyptian Ecosystem</span></h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up">
+                        <h3 class="font-bold text-xl mb-2">National Initiative for Smart Green Projects (NISGP)</h3>
+                        <p class="text-slate-600">An ideal candidate for this flagship government program, providing national visibility, endorsement, and a pathway to showcase at international forums like COP. [4, 32]</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="font-bold text-xl mb-2">European Union / EIB Global Industrial Recycling Grant</h3>
+                        <p class="text-slate-600">A perfect match for the <strong class="font-semibold">€21 million grant</strong> funded by the EU, specifically aimed at greening the Egyptian economy by boosting industrial recycling. [5, 34]</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="font-bold text-xl mb-2">Incubators and Accelerators</h3>
+                        <p class="text-slate-600">Prime targets like the <strong class="font-semibold">NilePreneurs ClimaTech Accelerator</strong> offer expert mentorship, networking, improved market access, and preparation for investment. [17, 29]</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         
+         <section id="references" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Data <span class="text-blue-500">References</span></h2>
+                <div class="max-w-4xl mx-auto bg-slate-50 p-6 rounded-lg shadow-inner">
+                    <ol class="list-decimal list-inside space-y-3 text-sm text-slate-600 columns-1 md:columns-2">
+                        <li>Internal Project Report: "Industrial Grease from Recycled Oil."</li>
+                        <li>Global Growth Insights. "Waste Oil Recycling Market Report, 2033."</li>
+                        <li>Fortune Business Insights. "Grease Market Size, Share, Growth, 2032."</li>
+                        <li>UNFCCC. "Egypt’s National Initiative for Smart Green Projects."</li>
+                        <li>European Investment Bank. "Egypt and EIB Global grant." June 2025.</li>
+                        <li>Business Research Insights. "Waste Oil Recycling Market [2025-2033]."</li>
+                        <li>Orizon. "ESG and the circular economy."</li>
+                        <li>U.S. EPA. "Used Oil Management Program."</li>
+                        <li>J.P. Morgan Private Bank. "Why consider a circular economy?"</li>
+                        <li>RSC Publishing. "Re-refining of used oils: A review."</li>
+                        <li>Zion Market Research. "Grease Market Size & Forecast 2032."</li>
+                        <li>Bannister, M. "Lubricating Grease: A Brief History." The NLGI Spokesman.</li>
+                        <li>Nolan, S. "Grease Basics." Machinery Lubrication, Noria Corp.</li>
+                        <li>U.S. EPA. "Managing, Reusing, and Recycling Used Oil."</li>
+                        <li>Rincon, J., et al. "Feasibility Study for an Integrated Used Oil Recycling Plant."</li>
+                        <li>Boughton, B., and Horvath, A. "Environmental assessment of used oil."</li>
+                        <li>LNS. "The Digital Twin in Asset Performance Management."</li>
+                        <li>El-Gendy, N.S., et al. "Upgrading of Egyptian used lubricating oil."</li>
+                        <li>NilePreneurs Initiative. Official Program Documentation.</li>
+                        <li>EIB Global. Official Press Releases.</li>
+                        <li>Rizvi, S. A. "A Comprehensive Review of Lubricating Grease."</li>
+                        <li>Co-operative-Development. "The Manufacturing Technology of Lubricating Grease."</li>
+                        <li>NLGI. "Grease Production Survey Report."</li>
+                        <li>Milestone Institute. "What Is PLC and SCADA? 2025 Guide."</li>
+                        <li>GE Vernova. "HMI / SCADA: Everything You Need to Know."</li>
+                        <li>AccScience. "AI for Process and Design." June 2026.</li>
+                        <li>GlobeNewswire. "Artificial Intelligence in Chemicals Report 2024-2030."</li>
+                        <li>U.S. DOE. "Used Oil Re-refining Study to Address Energy Policy Act."</li>
+                        <li>Climtech Run. "DEEP DIVE INTO CLIMATE TECHNOLOGY STARTUPS."</li>
+                        <li>Enginerio. "7 Best P&ID Tools & Software For Plant Design."</li>
+                        <li>Cremonez, P. A., et al. "Evaluation of used lubricant oil regeneration."</li>
+                        <li>UNDP Egypt. "SDG Localization Reports at...NISGP."</li>
+                    </ol>
+                </div>
+            </div>
+         </section>
+        
+        <footer id="contact" class="bg-slate-800 text-white py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">🚀 Final Summary & <span class="text-blue-400">Strategic Recommendations</span></h2>
+                <p class="max-w-3xl mx-auto mb-8 text-slate-300" data-aos="fade-up" data-aos-delay="100">
+                    This project is designed not only for profitability but for profound positive environmental impact. Its feasibility is established on high technical feasibility, promising economic potential, and compelling strategic strength. We are ready to move forward.
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8 text-left text-sm">
+                    <div class="bg-slate-700 p-4 rounded-lg" data-aos="zoom-in"><strong class="font-semibold text-blue-400 block mb-1">1. Formalize Investment Package:</strong> Package this roadmap into a professional investor pitch deck.</div>
+                    <div class="bg-slate-700 p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="50"><strong class="font-semibold text-blue-400 block mb-1">2. Initiate Funding Outreach:</strong> Formally apply to the NilePreneurs Accelerator and EU/EIB grant.</div>
+                    <div class="bg-slate-700 p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="100"><strong class="font-semibold text-blue-400 block mb-1">3. Refine Pilot Plant Costs:</strong> Initiate discussions with skid-fabrication vendors for budgetary cost estimates.</div>
+                    <div class="bg-slate-700 p-4 rounded-lg" data-aos="zoom-in" data-aos-delay="150"><strong class="font-semibold text-blue-400 block mb-1">4. Gauge Market Interest:</strong> Begin outreach to potential customers to secure non-binding Letters of Intent (LOIs).</div>
+                </div>
+                <a href="mailto:invest@greasecycletech.com?subject=Investment%20Inquiry%3A%20Industrial%20Grease%20from%20Recycled%20Oil" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block" data-aos="fade-up" data-aos-delay="200">Contact Us to Invest</a>
+                <p class="mt-12 text-slate-400 text-sm">&copy; 2025 GreaseCycle Technologies. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS (Animate on Scroll)
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a, header nav a');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu on link click
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                     if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                     }
+                });
+            });
+
+            // Headline animation
+            const animatedText = document.querySelector('.animated-text');
+            if (animatedText) {
+                const text = animatedText.textContent;
+                animatedText.textContent = '';
+                text.split('').forEach((char, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = char === ' ' ? '\u00A0' : char; // Handle spaces
+                    span.style.animationDelay = `${index * 0.05}s`;
+                    animatedText.appendChild(span);
+                });
+            }
+
+            // Chart.js visualizations
+            const chartObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const canvas = entry.target;
+                        // Prevent re-initialization
+                        if (Chart.getChart(canvas)) {
+                            return;
+                        }
+
+                        const chartType = canvas.dataset.chartType;
+
+                        if (chartType === 'market') {
+                            new Chart(canvas, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['2024 Value', 'Projected Value'],
+                                    datasets: [
+                                        {
+                                            label: 'Waste Oil Recycling Market ($B)',
+                                            data: [4.3, 9.8],
+                                            backgroundColor: 'rgba(39, 174, 96, 0.7)',
+                                            borderColor: 'rgba(39, 174, 96, 1)',
+                                            borderWidth: 1
+                                        },
+                                        {
+                                            label: 'Grease Market ($B)',
+                                            data: [6.6, 9.7],
+                                            backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                                            borderColor: 'rgba(52, 152, 219, 1)',
+                                            borderWidth: 1
+                                        }
+                                    ]
+                                },
+                                options: { responsive: true, plugins: { legend: { position: 'bottom' } }, scales: { y: { beginAtZero: true, ticks: { callback: value => '$' + value + 'B' } } } }
+                            });
+                        } else if (chartType === 'capex') {
+                            new Chart(canvas, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: ['Process Equipment', 'I&C / Automation', 'Engineering/Design', 'Other (Install, etc.)'],
+                                    datasets: [{ data: [55, 20, 15, 10], backgroundColor: ['#2C3E50', '#3498DB', '#34495E', '#BDC3C7'] }]
+                                },
+                                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+                            });
+                        } else if (chartType === 'opex') {
+                             new Chart(canvas, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: ['Feedstock & Chemicals', 'Labor', 'Utilities & Maint.', 'Other G&A'],
+                                    datasets: [{ data: [50, 25, 15, 10], backgroundColor: ['#27AE60', '#2ECC71', '#16A085', '#95A5A6'] }]
+                                },
+                                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+                            });
+                        }
+                        
+                        observer.unobserve(canvas); // Animate only once
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll('.chart-canvas').forEach(canvas => {
+                chartObserver.observe(canvas);
+            });
+        });
+    </script>
+</body>
+</html>
